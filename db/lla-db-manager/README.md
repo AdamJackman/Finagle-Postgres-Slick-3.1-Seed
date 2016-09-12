@@ -3,6 +3,7 @@
 This mini rails layer is solely responsible for the postgres database and its versioning.
 
 ##Dependencies
+
 rails, ruby, postgres.
 
 # Getting started
