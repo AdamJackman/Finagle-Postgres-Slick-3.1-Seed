@@ -1,8 +1,8 @@
-## Rails Database Manager
+# Rails Database Manager
 
 This mini rails layer is solely responsible for the postgres database and its versioning.
 
-#Dependencies
+##Dependencies
 rails, ruby, postgres.
 
 # Getting started
@@ -21,10 +21,10 @@ If you changed the username/pass/database then also change application.conf to r
 
 Now you are done. Confirm working by connecting `psql <dbname>` and checking the users table exists.
 
-#Making a change to the db
+##Making a change to the db
 
 `rails g migration <migration name>`
 
-#Updating the db
+##Updating the db
 
 `rake db:migrate`

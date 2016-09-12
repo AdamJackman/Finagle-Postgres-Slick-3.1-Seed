@@ -1,4 +1,4 @@
-## Seed
+# Seed
 
 A basic skeleton that you should be able to jump into. Setup Sucks.
 
@@ -6,7 +6,7 @@ A basic skeleton that you should be able to jump into. Setup Sucks.
 * It is backed by a rails managed Postgres DB.
 * Slick 3.1 is being used to interact with the DB from the server.
 
-#Setup
+##Setup
 
 1. Go to the db folder and complete the set up in the db manager
 2. Make sure you have SBT and Scala installed. This seed was built at scala 2.11.7 but can be changed in build.sbt.
