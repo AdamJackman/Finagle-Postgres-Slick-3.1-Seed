@@ -3,7 +3,8 @@ package io.lla.controllers
 import com.google.inject.Inject
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.http.Controller
-import io.lla.db.daos.{User, UserDao}
+import io.lla.db.daos.{UserDao}
+import io.lla.db.tables.User
 
 /**
   * First Basic Controller.
@@ -21,7 +22,7 @@ class UserController @Inject()(userDao: UserDao) extends Controller {
 
   get("/ins") { request: Request =>
     for {
-      ins <- userDao.insertUser(User("Adam3", "Jackman3", "Adam3", "password", "a3@a.com"))
+      ins <- userDao.insertUser(User(None, "Adam", "Jackman", "Adam", "password", "a@a.com"))
     } yield response.ok.json(ins)
   }
 }
