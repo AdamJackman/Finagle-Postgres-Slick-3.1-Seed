@@ -1,9 +1,9 @@
 package io.lla.implications
 
-import com.twitter.util.{Promise, Return, Throw}
-import scala.util.{Failure, Success}
+import com.twitter.util.{Promise, Return, Throw, Future => twitterFuture, Try => twitterTry}
 
-import scala.concurrent.ExecutionContext
+import scala.concurrent.{ExecutionContext, Future => scalaFuture}
+import scala.util.{Failure, Success, Try => scalaTry}
 
 /**
   * Slick 3.1 likes to use Scala Futures.
@@ -11,11 +11,6 @@ import scala.concurrent.ExecutionContext
   * This should be imported By Slick DAOs so everything else is happy
   */
 object TwitterConverters {
-  import scala.util.{Try => scalaTry}
-  import com.twitter.util.{Try => twitterTry}
-  import scala.concurrent.{Future => scalaFuture}
-  import com.twitter.util.{Future => twitterFuture}
-
   implicit def scalaTryToTwitterTry[T](t: scalaTry[T]): twitterTry[T] = t match {
     case Success(r) => Return(r)
     case Failure(ex) => Throw(ex)

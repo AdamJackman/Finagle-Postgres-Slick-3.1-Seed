@@ -1,12 +1,13 @@
 package io.lla.db.daos
 
-import com.google.inject.Singleton
+import com.google.inject.{Inject, Singleton}
 import com.twitter.util.Future
 import io.lla.db.tables.Users
 import slick.driver.PostgresDriver.api._
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import io.lla.implications.TwitterConverters.{scalaFutureToTwitterFuture}
+import io.lla.implications.TwitterConverters.scalaFutureToTwitterFuture
+import slick.driver.PostgresDriver.backend.DatabaseDef
 
 /**
   * Slick 3.1 Documentation is a complete Shit Show.
@@ -14,8 +15,7 @@ import io.lla.implications.TwitterConverters.{scalaFutureToTwitterFuture}
   *
   */
 @Singleton
-class UserDao {
-  val db = Database.forConfig("postgres")
+class UserDao @Inject() (db: DatabaseDef) {
   val users = TableQuery[Users]
 
   def getUsernames: Future[Seq[String]] = {

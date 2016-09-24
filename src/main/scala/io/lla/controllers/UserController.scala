@@ -21,7 +21,7 @@ class UserController @Inject()(userDao: UserDao) extends Controller {
 
   get("/ins") { request: Request =>
     for {
-      ins <- userDao.insertUser(User("Adam2", "Jackman2", "Adam2", "password", "a2@a.com"))
+      ins <- userDao.insertUser(User("Adam3", "Jackman3", "Adam3", "password", "a3@a.com"))
     } yield response.ok.json(ins)
   }
 }
