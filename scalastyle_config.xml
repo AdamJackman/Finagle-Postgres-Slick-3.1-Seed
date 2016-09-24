@@ -132,9 +132,9 @@
     </check>
     <check class="org.scalastyle.scalariform.DisallowSpaceAfterTokenChecker" level="warning" enabled="false"></check>
     <check class="org.scalastyle.scalariform.DisallowSpaceBeforeTokenChecker" level="warning" enabled="false"></check>
-    <check class="org.scalastyle.scalariform.EnsureSingleSpaceAfterTokenChecker" level="warning" enabled="false"></check>
-    <check class="org.scalastyle.scalariform.EnsureSingleSpaceBeforeTokenChecker" level="warning" enabled="false"></check>
-    <check class="org.scalastyle.scalariform.NonASCIICharacterChecker" level="warning" enabled="false"></check>
+    <check class="org.scalastyle.scalariform.EnsureSingleSpaceAfterTokenChecker" level="warning" enabled="true"></check>
+    <check class="org.scalastyle.scalariform.EnsureSingleSpaceBeforeTokenChecker" level="warning" enabled="true"></check>
+    <check class="org.scalastyle.scalariform.NonASCIICharacterChecker" level="warning" enabled="true"></check>
     <check class="org.scalastyle.file.IndentationChecker" level="warning" enabled="false">
         <parameters>
             <parameter name="tabSize"><![CDATA[2]]></parameter>
