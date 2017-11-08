@@ -17,12 +17,13 @@ config/database.yml does that:
 
         if not: `createuser postgres`, and `ALTER USER postgres WITH SUPERUSER`
 
-    - database: this names the db to what you want seed-db is a placeholder from my use.
+    - database: this names the db to what you want seed_db is a placeholder from my use.
 
-    - If you changed the username/pass/database then also change application.conf to reflect that
+    - If you changed the username/pass/database then also change application.conf in the scala resource file to reflect that
 
 * install relevant gems with: `bundle install`
 * Create the Database with: `rake db:setup`
+* Load the schema with: `rake db:schema:load`
 
 Now you are done. Confirm working by connecting `psql <dbname>` and checking the users table exists.
 
