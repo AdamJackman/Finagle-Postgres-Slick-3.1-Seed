@@ -3,7 +3,7 @@ package io.seed.controllers
 import com.google.inject.Inject
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.http.Controller
-import io.seed.db.daos.{UserDao}
+import io.seed.db.daos.UserDao
 import io.seed.db.tables.User
 
 /**
@@ -13,8 +13,11 @@ import io.seed.db.tables.User
   * @param userDao
   */
 class UserController @Inject()(userDao: UserDao) extends Controller {
-
   get("/") { request: Request =>
+    response.ok.json("{}")
+  }
+
+  get("/users") { request: Request =>
     for {
       usernames <- userDao.getUsernames
     } yield response.ok.json(usernames)
