@@ -1,4 +1,4 @@
-package io.lla.db.tables
+package io.seed.db.tables
 import slick.driver.PostgresDriver.api._
 
 /**

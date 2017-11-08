@@ -1,4 +1,4 @@
-package io.lla.implications
+package io.seed.implications
 
 import com.twitter.util.{Promise, Return, Throw, Future => twitterFuture, Try => twitterTry}
 

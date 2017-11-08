@@ -1,12 +1,12 @@
-package io.lla.db.daos
+package io.seed.db.daos
 
 import com.google.inject.{Inject, Singleton}
 import com.twitter.util.Future
-import io.lla.db.tables.{User, Users}
+import io.seed.db.tables.{User, Users}
 import slick.driver.PostgresDriver.api._
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import io.lla.implications.TwitterConverters.scalaFutureToTwitterFuture
+import io.seed.implications.TwitterConverters.scalaFutureToTwitterFuture
 import slick.driver.PostgresDriver.backend.DatabaseDef
 
 /**

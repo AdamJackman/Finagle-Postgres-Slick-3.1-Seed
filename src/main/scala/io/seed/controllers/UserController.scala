@@ -1,10 +1,10 @@
-package io.lla.controllers
+package io.seed.controllers
 
 import com.google.inject.Inject
 import com.twitter.finagle.http.Request
 import com.twitter.finatra.http.Controller
-import io.lla.db.daos.{UserDao}
-import io.lla.db.tables.User
+import io.seed.db.daos.{UserDao}
+import io.seed.db.tables.User
 
 /**
   * First Basic Controller.

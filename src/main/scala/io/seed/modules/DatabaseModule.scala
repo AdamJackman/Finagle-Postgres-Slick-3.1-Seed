@@ -1,4 +1,4 @@
-package io.lla.modules
+package io.seed.modules
 
 import com.google.inject.{Provides, Singleton}
 import com.twitter.inject.TwitterModule

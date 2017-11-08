@@ -17,7 +17,7 @@ config/database.yml does that:
 
         if not: `createuser postgres`, and `ALTER USER postgres WITH SUPERUSER`
 
-    - database: this names the db to what you want lla-db is a placeholder from my use.
+    - database: this names the db to what you want seed-db is a placeholder from my use.
 
     - If you changed the username/pass/database then also change application.conf to reflect that
 
